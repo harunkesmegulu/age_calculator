@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <link href="assets/datepicker/daterangepicker.css" rel="stylesheet" />
+    <title>Age Calculator</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+
+        }
+
+        body {
+            background-image: url(img/bg.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+            font-family: 'Lato', sans-serif;
+            color: white;
+        }
+
+        .age__calculator {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            height: 100vh;
+        }
+
+        .age__calculator--header {
+            margin: 20px;
+            font-size: 2rem;
+        }
+
+        .age__calculator--output {
+            display: grid;
+            grid-template-columns: repeat(6, 1fr);
+            grid-gap: 5rem;
+            line-height: 4rem;
+            font-size: 2rem;
+        }
+
+        .age__calculator--input {
+            display: flex;
+            flex-direction: column;
+            margin: 20px;
+            line-height: 3rem;
+        }
+
+        .loading {
+            /* width: 50px; */
+            position: relative;
+            top: -300px;
+            left: 49%;
+        }
+
+        .loading img {
+            width: 40px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Age Calculator</h1>
+    <div id="countdown" class="countdown">
+        <div class="time">
+            <h2 id="years"></h2>
+            <small>years</small>
+        </div>
+        <div class="time">
+            <h2 id="months"></h2>
+            <small>months</small>
+        </div>
+        <div class="time">
+            <h2 id="days"></h2>
+            <small>days</small>
+        </div>
+        <div class="time">
+            <h2 id="hours"></h2>
+            <small>hours</small>
+        </div>
+        <div class="time">
+            <h2 id="minutes"></h2>
+            <small>minutes</small>
+        </div>
+        <div class="time">
+            <h2 id="seconds"></h2>
+            <small>seconds</small>
+        </div>
+    </div>
+
+    <div class="time">
+        <label class="label">Select Your Birthday</label>
+        <div class="input-group-icon">
+            <input type="date" name="birthday">
+        </div>
+    </div>
+
+    <div id="year" class="year"></div>
+    <img src="./img/spinner.gif" alt="Loading..." id="loading" class="loading" style="display: none;" />
+
+    <script src="script.js"></script>
+</body>
+
+</html>
